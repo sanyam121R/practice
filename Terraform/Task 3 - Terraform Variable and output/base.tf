@@ -7,7 +7,7 @@ resource "local_file" "foo" {
 
 resource "local_file" "using_var_types" {
   filename = var.ami["us-west-1"]
-  content = var.region
+  content  = var.region
 }
 
 output "filename-from-foo" {
