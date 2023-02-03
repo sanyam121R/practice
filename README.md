@@ -1,4 +1,3 @@
 # Practice 
 
-## The learning which I'm going through in the CloudEQ
-
+### The learning which I'm going through in the CloudEQ
