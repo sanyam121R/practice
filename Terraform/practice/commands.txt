@@ -1,0 +1,5 @@
+$ pwd
+~/terraform/base
+$ echo "terraform.tfstate*" >> .gitignore
+$ git add .gitignore
+$ git commit -m "Adding .gitignore file"
