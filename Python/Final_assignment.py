@@ -36,24 +36,24 @@ def binary_to_number():
 
 # 4.Reverse the list by using negative index and apply logic also.
 def rev_list():
-    print("\n4. Reverse the list by using negative index and apply logic also.")
-    list = ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil']
-    new_list = []
-    for i in range(len(list)-1 , -1, -1):
-        new_list.append(list[i])
-    
-    print(list)
-    print(new_list)
-    print()
+	print("\n4. Reverse the list by using negative index and apply logic also.")
+	list = ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil']
+	new_list = []
+	for i in range(len(list)-1 , -1, -1):
+		new_list.append(list[i])
+	
+	print(list)
+	print(new_list)
+	print()
 
 
 '''
 5. participants_list = [['Sam', 'Emma', 'Joan', 'Krish', 'John', 'Desmond', 'Tom', 'Nicole' ],
-    ['Brad', 'Walter', 'Sam', 'Krish','Desmond', 'Jennifer'],
-    ['Tom', 'Krish', 'Emma', 'Mia', 'Nicole', 'Sam', 'Desmond'],
-    ['Desmond', 'Sam', 'Krish', 'Mia', 'Harry'],
-    ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil'],
-    ['Krish', 'Brad', 'Walter', 'Jennifer','Desmond', 'Harry', 'Nicole', 'Sam']] '''
+	['Brad', 'Walter', 'Sam', 'Krish','Desmond', 'Jennifer'],
+	['Tom', 'Krish', 'Emma', 'Mia', 'Nicole', 'Sam', 'Desmond'],
+	['Desmond', 'Sam', 'Krish', 'Mia', 'Harry'],
+	['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil'],
+	['Krish', 'Brad', 'Walter', 'Jennifer','Desmond', 'Harry', 'Nicole', 'Sam']] '''
 # print("daily_participants---------")
 # daily_participants(participants_list) 
 # # ['Desmond', 'Krish', 'Sam']
@@ -64,67 +64,64 @@ def rev_list():
 # first_day_only_participants(participants_list) #  ['John', 'Joan']
 
 def participations():
-    def daily_participants(d, pl):
-        daily_comers = []
-        for participant, participation in d.items():
-            if participation == len(pl):
-                daily_comers.append(participant)
-        
-        return daily_comers
+	def daily_participants(d, pl):
+		daily_comers = []
+		for participant, participation in d.items():
+			if participation == len(pl):
+				daily_comers.append(participant)
+		
+		return daily_comers
 
-    def one_time_participants(d, pl):
-        one_timers = []
-        for participant, participation in d.items():
-            if participation == 1:
-                one_timers.append(participant)
+	def one_time_participants(d, pl):
+		one_timers = []
+		for participant, participation in d.items():
+			if participation == 1:
+				one_timers.append(participant)
 
-        return one_timers
+		return one_timers
 
-    def first_day_only_participants(d, pl):
-        bored_participants = []
-        for i in pl[0]:
-            if i in d and d[i] == 1:
-                bored_participants.append(i)
-        
-        return bored_participants
+	def first_day_only_participants(d, pl):
+		bored_participants = []
+		for i in pl[0]:
+			if i in d and d[i] == 1:
+				bored_participants.append(i)
+		
+		return bored_participants
 
 
-    participants_list = [['Sam', 'Emma', 'Joan', 'Krish', 'John', 'Desmond', 'Tom', 'Nicole' ], ['Brad', 'Walter', 'Sam', 'Krish','Desmond', 'Jennifer'], ['Tom', 'Krish', 'Emma', 'Mia', 'Nicole', 'Sam', 'Desmond'], ['Desmond', 'Sam', 'Krish', 'Mia', 'Harry'], ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil'], ['Krish', 'Brad', 'Walter', 'Jennifer','Desmond', 'Harry', 'Nicole', 'Sam']]
+	participants_list = [['Sam', 'Emma', 'Joan', 'Krish', 'John', 'Desmond', 'Tom', 'Nicole' ], ['Brad', 'Walter', 'Sam', 'Krish','Desmond', 'Jennifer'], ['Tom', 'Krish', 'Emma', 'Mia', 'Nicole', 'Sam', 'Desmond'], ['Desmond', 'Sam', 'Krish', 'Mia', 'Harry'], ['Ron', 'Ginny', 'Ted', 'Krish', 'Mia', 'Sam', 'Sachin', 'Desmond', 'Kapil'], ['Krish', 'Brad', 'Walter', 'Jennifer','Desmond', 'Harry', 'Nicole', 'Sam']]
 
-    d = {}
-    for i in participants_list:
-        for j in i:
-            if j not in d:
-                d[j] = 1
-            else:
-                d[j] += 1
+	d = {}
+	for i in participants_list:
+		for j in i:
+			if j not in d:
+				d[j] = 1
+			else:
+				d[j] += 1
 
-    print("\n5. Play around with the list and printing the following : ")
-    print("Daily Participants---------------------------\n", daily_participants(d, participants_list))
-    print("One time Participants------------------------\n", one_time_participants(d, participants_list))
-    print("Only First day Participants------------------\n", first_day_only_participants(d, participants_list))
-    print()
+	print("\n5. Play around with the list and printing the following : ")
+	print("Daily Participants---------------------------\n", daily_participants(d, participants_list))
+	print("One time Participants------------------------\n", one_time_participants(d, participants_list))
+	print("Only First day Participants------------------\n", first_day_only_participants(d, participants_list))
+	print()
 
 
 # 6. Create a list by picking an odd-index items from the first list and even index items from the second return third list.
 
 def zig_zag():
+	print("\n6. Create a list by picking an odd-index items from the first list and even index items from the second return third list.s")
+	first_list , second_list , third_list = [0,1,2,3,4,5,6,7,8,9] , [0,9,8,7,6,5] , []
+	l = min(len(second_list), len(first_list))
 
-    print("\n6. Create a list by picking an odd-index items from the first list and even index items from the second return third list.s")
-    first_list , second_list , third_list = [0,1,2,3,4,5,6,7,8,9] , [0,9,8,7,6,5] , []
-    l = min(len(second_list), len(first_list))
-
-    for i in range(l):
-        if i%2 == 0: third_list.append(second_list[i])
-        else: third_list.append(first_list[i])
-    
-    if l == len(first_list): third_list += second_list[l+1:]
-    else: third_list += first_list[l+1:]
-    
-    print(third_list)
-    print()
-
-
+	for i in range(l):
+		if i%2 == 0: third_list.append(second_list[i])
+		else: third_list.append(first_list[i])
+	
+	if l == len(first_list): third_list += second_list[l+1:]
+	else: third_list += first_list[l+1:]
+	
+	print(third_list)
+	print()
 
 
 # 7. Iterate a given list and check if a given element exists as a key’s value in a dictionary. If not, delete it from the list by using list comprehension 
@@ -132,35 +129,46 @@ def zig_zag():
 # dict ={"key1":1234, "k2":"ram"}
 # list= [1234,"ram"]
 
+def check_d():
+	print("\n7. Iterate a given list and check if a given element exists as a key//'s value in a dictionary. If not, delete it from the list by using list comprehension\ndict = {'key1': 1234, 'k2': 'ram'}  list = [ 1234 , 'ram' ]\n")
+	d = { "key1": 1234, "k2": "ram" }
+	l = [1234,"ram",890,"kjk",'cyg',52,42,"hi"]
+
+	for v, k in d.items():
+		[l.remove(i) for i in l if i==k ]
+
+	print("Updated list is:", l)
+
+
 # 8. Access the nested key ‘salary’ from the following JSON
 '''
 sampleJson = """{ 
    "company":{ 
-      "employee":{ 
-         "name":"emma",
-         "payble":{ 
-            "salary":7000,
-            "bonus":800
-         }
-      }
+	  "employee":{ 
+		 "name":"emma",
+		 "payble":{ 
+			"salary":7000,
+			"bonus":800
+		 }
+	  }
    }
    { 
-      "employee":{ 
-         "name":"emma",
-         "payble":{ 
-            "salary":7000,
-            "bonus":800
-         }
-      }
+	  "employee":{ 
+		 "name":"emma",
+		 "payble":{ 
+			"salary":7000,
+			"bonus":800
+		 }
+	  }
    }
    { 
-      "employee":{ 
-         "name":"emma",
-         "payble":{ 
-            "salary":7000,
-            "bonus":800
-         }
-      }
+	  "employee":{ 
+		 "name":"emma",
+		 "payble":{ 
+			"salary":7000,
+			"bonus":800
+		 }
+	  }
    }
 }"""
 
@@ -176,8 +184,9 @@ sampleJson = """{
 
 
 div_by_7_but_not_by_5()
-vowels_consonent_string('asdfsadgaswero')
+vowels_consonent_string('asdfsegausiweqro')
 binary_to_number()
 rev_list()
 participations()
 zig_zag()
+check_d()
