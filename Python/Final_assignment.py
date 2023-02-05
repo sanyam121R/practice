@@ -266,6 +266,42 @@ def read_json():
 
 # 9. Create class OOPS and implement all oops concept in that.
 
+class Company():
+	'''This class is for the companies details  '''
+	def __init__(self) -> None:
+		pass
+
+	def about_company(self):
+		print("Hello everyone this company is recently found..")
+	
+
+class Company_department(Company):
+
+	def cloud_security(self):
+		deprt_id = "Csr"
+		print("This is Cloud Security department:", deprt_id)
+	
+	def software_dev(self):
+		deprt_id = "SD"
+		print("This is Software Development department:", deprt_id)
+
+
+class Company_emp(Company_department):
+	'''This class is for company employees'''
+	def __init__(self, emp_id, emp_name, emp_department):
+		self.emp_id = emp_id
+		self.emp_name = emp_name
+		self.emp_department = self.software_dev()
+		self.emp_salary = 0
+
+	def set_salary(self, salary):
+		self.emp_salary = salary
+	
+	def get_emp_name(self):
+		return self.emp_name
+	
+	def get_emp_salary(self):
+		return self.emp_salary
 
 
 
@@ -282,3 +318,17 @@ participations()
 zig_zag()
 check_d()
 read_json()
+
+
+
+ce_1231 = Company_emp(1231, 'Sanyam', 'Cloud Security and Software Deveploment')
+
+ce_1231.set_salary("100,000 $")
+
+print("\n\n9. Create class OOPS and implement all oops concept in that.")
+
+print("\nCompany deatils:")
+print(ce_1231.about_company)
+print("\nEmployee Name: ", ce_1231.emp_name, "\nHis/Her employee id", ce_1231.emp_id)
+print()
+print()
