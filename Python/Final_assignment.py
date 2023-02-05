@@ -307,6 +307,33 @@ class Company_emp(Company_department):
 
 # 10. Create a class BANK and with two function simple interest and compound interest. U need to create instance for pnb, icici and hdfc banks with corresponding input.
 
+class BANK():
+
+	def __init__(self, bank_name , principal , time , rate) -> None:
+		self.bank_name = bank_name
+		self.principal = principal
+		self.time = time
+		self.rate = rate
+		self.si = 0
+		self.ci = 0
+
+	def simple_interest(self):
+		si = self.principal * self.time * self.rate / 100
+		return self.si
+
+	def compound_interest(self):
+		amount = self.principal * (pow(1 + self.rate/100), self.time)
+		self.ci = amount - self.principal
+		return self.ci
+
+	def print_details(self):
+		print("Bank name:", self.bank_name)
+		print("Principal =", self.principal)
+		print("Time =", self.time)
+		print("Rate =", self.rate)
+		print("Simple Interest =", self.si)
+		print("Compound Interest =", self.ci)
+
 
 
 
@@ -320,15 +347,25 @@ check_d()
 read_json()
 
 
-
 ce_1231 = Company_emp(1231, 'Sanyam', 'Cloud Security and Software Deveploment')
-
 ce_1231.set_salary("100,000 $")
 
 print("\n\n9. Create class OOPS and implement all oops concept in that.")
-
 print("\nCompany deatils:")
 print(ce_1231.about_company)
 print("\nEmployee Name: ", ce_1231.emp_name, "\nHis/Her employee id", ce_1231.emp_id)
-print()
+print("\n")
+
+
+
+print("10. Create a class BANK and with two function simple interest and compound interest. U need to create instance for pnb, icici and hdfc banks with corresponding input.\n")
+
+pnb = BANK("Punjab National Bank", 10000, 15, 6)
+icici = BANK("ICICI Bank", 15000, 20, 8)
+hdfc = BANK("HDFC Bank", 20000, 5, 6)
+
+print("The simple interest and the compound interest on the following bank will be as follows")
+pnb.print_details()
+icici.print_details()
+hdfc.print_details()
 print()
