@@ -141,42 +141,133 @@ def check_d():
 
 
 # 8. Access the nested key ‘salary’ from the following JSON
-'''
-sampleJson = """{ 
-   "company":{ 
-	  "employee":{ 
-		 "name":"emma",
-		 "payble":{ 
-			"salary":7000,
-			"bonus":800
-		 }
-	  }
-   }
-   { 
-	  "employee":{ 
-		 "name":"emma",
-		 "payble":{ 
-			"salary":7000,
-			"bonus":800
-		 }
-	  }
-   }
-   { 
-	  "employee":{ 
-		 "name":"emma",
-		 "payble":{ 
-			"salary":7000,
-			"bonus":800
-		 }
-	  }
-   }
-}"""
+''' sampleJson = """
+{ 
+    "company1":{ 
+       "employee":{ 
+          "name":"Cristina",
+          "payble":{ 
+             "salary":'7000$',
+             "bonus":'800$'
+          }
+       }
+    },
+    "company2":{
+       "employee":{ 
+          "name":"Tenzzy",
+          "payble":{ 
+             "salary":'9000$',
+             "bonus":'800$'
+          }
+       }
+    },
+    "company3":{ 
+       "employee":{ 
+          "name":"Lina",
+          "payble":{ 
+             "salary":'5000$',
+             "bonus":'800$'
+          }
+       }
+    }
+	"company4":{ 
+       "employee":{ 
+          "name":"Sam",
+          "payble":{ 
+             "salary":'15000$',
+             "bonus":'800$'
+          }
+       }
+    }
+	"company5":{ 
+       "employee":{ 
+          "name":"Yansam",
+          "payble":{ 
+             "salary":'50000$',
+             "bonus":'800$'
+          }
+       }
+    }
+ }
+"""
 
 '''
 # emp-id     emp-name -- salary
 
+def read_json():
+	import json
+
+	print()
+	print("\n\n8. Access the nested key ‘salary’ from the following JSON\n")
+
+	company_details_json_file = """
+	{ 
+		"company1":{ 
+			"employee":{ 
+				"name":"Cristina",
+				"payble":{ 
+					"salary":"7000$",
+					"bonus":"800$"
+				}
+			}
+		},
+		
+		"company2":{
+			"employee":{ 
+				"name":"Tenzzy",
+				"payble":{ 
+					"salary":"9000$",
+					"bonus":"1200$"
+				}
+			}
+		},
+		
+		"company3":{ 
+			"employee":{ 
+				"name":"Lina",
+				"payble":{ 
+					"salary":"5000$",
+					"bonus":"800$"
+				}
+			}
+		},
+
+		"company4":{ 
+			"employee":{ 
+				"name":"Sam",
+				"payble":{ 
+					"salary":"15000$",
+					"bonus":"1800$"
+				}
+			}
+		},
+		"company5":{ 
+			"employee":{ 
+				"name":"Yansam",
+				"payble":{ 
+					"salary":"50000$",
+					"bonus":"8000$"
+				}
+			}
+		}
+	}
+	"""
+
+	company_details_json_data = json.loads(company_details_json_file)
+	print("Emp-Name      |       Salary")
+	print("____________________________\n")
+	for i in company_details_json_data:
+		emp_name = company_details_json_data[i]['employee']['name']
+		emp_salary = company_details_json_data[i]['employee']['payble']['salary']
+		# print(emp_name, "        |        ",emp_salary)
+
+		print('{:<14s}|{:>13s}'.format(emp_name, emp_salary))
+
 
 # 9. Create class OOPS and implement all oops concept in that.
+
+
+
 
 # 10. Create a class BANK and with two function simple interest and compound interest. U need to create instance for pnb, icici and hdfc banks with corresponding input.
 
@@ -190,3 +281,4 @@ rev_list()
 participations()
 zig_zag()
 check_d()
+read_json()
