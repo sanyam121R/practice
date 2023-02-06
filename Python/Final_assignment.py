@@ -335,7 +335,7 @@ class BANK():
 		print("Compound Interest =", self.ci)
 
 
-
+# Function calls ---------------------------------------------------------------
 
 div_by_7_but_not_by_5()
 vowels_consonent_string('asdfsegausiweqro')
@@ -347,6 +347,8 @@ check_d()
 read_json()
 
 
+# 9. Question 
+
 ce_1231 = Company_emp(1231, 'Sanyam', 'Cloud Security and Software Deveploment')
 ce_1231.set_salary("100,000 $")
 
@@ -357,6 +359,7 @@ print("\nEmployee Name: ", ce_1231.emp_name, "\nHis/Her employee id", ce_1231.em
 print("\n")
 
 
+# 10. Question 
 
 print("10. Create a class BANK and with two function simple interest and compound interest. U need to create instance for pnb, icici and hdfc banks with corresponding input.\n")
 
