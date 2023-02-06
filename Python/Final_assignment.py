@@ -322,11 +322,14 @@ class BANK():
 		return self.si
 
 	def compound_interest(self):
-		amount = self.principal * (pow(1 + self.rate/100), self.time)
+		amount = self.principal * (pow( (1 + self.rate/100), self.time) )
 		self.ci = amount - self.principal
 		return self.ci
 
 	def print_details(self):
+		self.simple_interest()
+		self.compound_interest()
+
 		print("Bank name:", self.bank_name)
 		print("Principal =", self.principal)
 		print("Time =", self.time)
@@ -363,9 +366,9 @@ print("\n")
 
 print("10. Create a class BANK and with two function simple interest and compound interest. U need to create instance for pnb, icici and hdfc banks with corresponding input.\n")
 
-pnb = BANK("Punjab National Bank", 10000, 15, 6)
-icici = BANK("ICICI Bank", 15000, 20, 8)
-hdfc = BANK("HDFC Bank", 20000, 5, 6)
+pnb = BANK("\nPunjab National Bank", 10000, 15, 6)
+icici = BANK("\nICICI Bank", 15000, 5, 8)
+hdfc = BANK("\nHDFC Bank", 20000, 5, 6)
 
 print("The simple interest and the compound interest on the following bank will be as follows")
 pnb.print_details()
