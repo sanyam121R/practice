@@ -318,7 +318,7 @@ class BANK():
 		self.ci = 0
 
 	def simple_interest(self):
-		si = self.principal * self.time * self.rate / 100
+		self.si = self.principal * self.time * self.rate / 100
 		return self.si
 
 	def compound_interest(self):
