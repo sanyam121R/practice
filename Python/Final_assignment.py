@@ -274,6 +274,8 @@ class Company():
 	def about_company(self):
 		print("Hello everyone this company is recently found..")
 	
+	def our_vision(self):
+		print("We want to do many things like. Our vision is to do certian things: ")
 
 class Company_department(Company):
 
@@ -302,6 +304,11 @@ class Company_emp(Company_department):
 	
 	def get_emp_salary(self):
 		return self.emp_salary
+	
+	def our_vision(self):
+		print("Us employees vision is to complete the vision of our company.")
+
+		return super().our_vision()
 
 
 
@@ -329,13 +336,14 @@ class BANK():
 	def print_details(self):
 		self.simple_interest()
 		self.compound_interest()
-
+		print()
+		print()
 		print("Bank name:", self.bank_name)
-		print("Principal =", self.principal)
-		print("Time =", self.time)
-		print("Rate =", self.rate)
-		print("Simple Interest =", self.si)
-		print("Compound Interest =", self.ci)
+		print("  Principal =", self.principal)
+		print("  Time =", self.time)
+		print("  Rate =", self.rate)
+		print("  Simple Interest =", self.si)
+		print("  Compound Interest =", self.ci)
 
 
 # Function calls ---------------------------------------------------------------
