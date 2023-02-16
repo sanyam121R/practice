@@ -1,0 +1,47 @@
+virtualenv env
+source env/bin/activate
+pip install django djangorestframework psycopg2-binary
+pip freeze > requirements.txt
+python --version > runtime.txt
+
+
+* Django commands *
+
+### start a project 
+$ django-admin startproject [project_name] .
+
+### start app 
+$ python manage.py startapp [app_name]
+
+
+### Migrations are Django's way of propagating changes you make to your models into your database schema.
+
+- 'migrate', which is responsible for applying and unapplying migrations.
+- 'makemigrations', which is responsible for creating new migrations based on the changes you have made to your models.
+You should think of migrations as a version control system for your database schema. makemigrations is responsible for packaging up your model changes into individual migration files - analogous to commits - and migrate is responsible for applying those to your database.
+
+$ python manage.py makemigrations
+$ python manage.py migrate
+
+
+python manage.py runserver
+
+
+
+* Configure postgreSQL into django settings.py file *
+PostgreSQL is the most capable of all the databases here in terms of schema support.
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-20-04
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbtest', 
+        'USER': 'postgres', 
+        'PASSWORD': '1234',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
+    }
+}
+
+

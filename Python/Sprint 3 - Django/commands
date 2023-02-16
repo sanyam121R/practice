@@ -1,0 +1,42 @@
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+Set-ExecutionPolicy Default -Scope Process
+
+If "Set-ExecutionPolicy Unrestricted -Scope Process" works for you..
+Also run "Set-ExecutionPolicy Default -Scope Process" 
+after activating the environment to change the execution policy back to avoid any potential issues 
+
+
+virtualenv env
+
+# launch env for linux 
+source env/bin/activate
+# launch env for windows
+env\bin\activate.bat
+
+pip install django djangorestframework psycopg2-binary
+
+pip freeze > requirements.txt
+python --version > runtime.txt
+
+
+* Django commands *
+
+django-admin startproject mysite .
+python manage.py startapp myapp
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+
+
+
+* Requirements *
+asgiref==3.3.4
+Django==3.2.4
+django-cors-headers==3.7.0
+djangorestframework==3.12.4
+pytz==2021.1
+sqlparse==0.4.1
